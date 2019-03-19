@@ -1,0 +1,51 @@
+<?php 
+include_once("connection.php"); 
+if( isset($_POST['temp']) && isset($_POST['rain']) ) { 
+    $Temp = $_POST['temp'];
+    $Rain = $_POST['rain'];
+
+    $query = "SELECT Temp, Rain FROM tempandrain ". 
+    " WHERE Temp = '$Temp' AND Rain = '$Rain'"; 
+
+    $result = mysqli_query($conn, $query);
+            echo "Success"; 
+} 
+?>
+
+<html>
+<head>
+<meta charset="utf-8">
+<title>Index</title>
+	<link type="text/css" rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+	<form action="connection.php" method="post">
+		<div>
+			Nhiệt độ và lượng mưa
+			<div>
+				<input type="text" id="txt0" name="temp"/>
+				<input type="text" id="txt1" name="rain"/>
+			</div>
+		</div>
+		<div>
+			Gửi kết quả
+			<div>
+				<input type="submit" name="btnSend" value="Send" onClick="Send()" />
+			</div>
+		</div>
+		<div>
+			Trả kết quả
+			<div>
+				Nhiệt độ
+				<label type="text" id="result1" value="0"></label>
+				<br>
+				Lượng mưa
+				<label type="text" id="result2" value="0"></label>
+			</div>
+		</div>
+		<div></div>
+	</form>
+	<script type="text/javascript" src="js/javascript.js"></script>
+</body>
+</html>

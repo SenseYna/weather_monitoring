@@ -1,0 +1,8 @@
+<?php
+$connect = mysqli_connect( 'localhost', 'roott', 'thiendat123', 'roott' );
+
+if ( mysqli_connect_errno( $connect ) ) {
+	echo 'Failed to connect';
+}
+
+?>
