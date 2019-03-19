@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.min.css">
+	<link rel="stylesheet" href="./CSS/style.css">
+	
+	<link rel="stylesheet" type="text/css" href="CSS/style.css">
+	<title>Index</title>
+</head>
+
+<body onload="weather()" class="awp-team" >
+	<div class="row awp-team" method="POST" action="process.php" >
+		
+		<div>
+			<div>
+				<div class="sonar-wrapper col-md-6">
+					<div class="sonar-emitter">
+						<p></p>
+						<div class="sonar-wave"></div>
+						<div class="col-md-offset-2 col-md-8 oC">
+						<input style="font-size:100px;" type="text" name="tz" id="tz" disabled/>&#186C
+						</div>
+					</div>
+					<div class="sonar-emitter3">
+						<div class="sonar-wave"></div>
+						<div class="col-md-offset-2 col-md-8 oC">
+						<input style="font-size:40px;" type="text" name="lat" id="lat" disabled/>
+						</div>
+					</div>
+				</div>	
+			</div>
+		
+			<div>
+				<div class="sonar-wrapper col-md-6">
+						<div class="sonar-emitter2">
+							<div class="sonar-wave"></div>
+							<div class="col-md-8 oC">
+							<input style="font-size:100px;" type="text" name="uv" id="uv" disabled/>
+							</div>
+						</div>
+						<div class="sonar-emitter4">
+							<div class="sonar-wave"></div>
+							<div class="col-md-offset-2 col-md-8 oC">
+								<input style="font-size:40px;" type="text" name="long" id="long" disabled/>
+							</div>
+						</div>
+				</div>		
+			</div>
+			<p id="location">
+
+			</p>
+		</div>
+		<div>
+			Gửi kết quả
+			<div>
+				<input type="submit" value="Send"/>
+			</div>
+		</div>
+		<div>
+			Trả kết quả
+			<div>
+			</div>
+		</div>
+</div>
+	<script src="jquery-3.3.1.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="JS/getlocation.js"></script>
+</body>
+
+</html>
